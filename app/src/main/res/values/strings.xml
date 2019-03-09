@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">StudentCo - Le réseau social virtuel !</string>
+
+    <string name="message_accueil">Veuilliez vous authentifier</string>
+
+    <string name="initLogin">Initialisation login</string>
+
+    <string name="app_quit">Quitter</string>
+
+    <string name="username">Nom d utilisateur</string>
+
+    <string name="password">Mot de passe</string>
+
+    <string name="login">Login</string>
+
+    <string name="loginOK">Bravo, vous êtes connecté !</string>
+
+    <string name="retry">Mauvais mot de passe, veuillez réessayer</string>
+
+    <string name="gloup">Gloup</string>
+
+    <string name="Init">Login initialized</string>
+
+    <string name="ListCodis"> Aucun codisciple!</string>
+
+    <string name="PasDePassword">Vous n avez pas entré votre mot de passe !</string>
+
+    <string name="PasDeUsername">Vous n avez pas entré votre nom d utilisateur</string>
+
+    <string name="stringCoDisciplesList">CoDisciples</string>
+</resources>
