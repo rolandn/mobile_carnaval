@@ -29,21 +29,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void BtnLogin(View view) {
+
         switch (view.getId()) {
             case R.id.bLogin:
                 User = ((EditText) findViewById(R.id.leUsername)).getText().toString();
                 Password = ((EditText) findViewById(R.id.lePassword)).getText().toString();
                 StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectNetwork().build());
-                connectionResult = restClient.callWebservice("/studentCo_rol_jquerry_17_oct/#/login/" + User + "/" + Password + "/");
+                connectionResult = restClient.callWebservice("/studentCo_rol_jquerry_17_oct/login/" + User + "/" + Password);
 
                 if(!User.toString().equals("")  && !Password.toString().equals("")){
-                    if (!connectionResult.equals("null") && TryEncode == true) {
+                    if (connectionResult.equals("true")) {
                         this.nbrTentatives = 0;
-                        TryEncode = true;
                         Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginOK), Toast.LENGTH_LONG).show();
+                        TryEncode = true;
 
-
-                    }
+                        }
                     else if(nbrTentatives  < 2){
                         nbrTentatives++;
                         Toast.makeText(getApplicationContext(), getResources().getString(R.string.retry), Toast.LENGTH_LONG).show();
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main, menu);
         ActionBar actionBar = getSupportActionBar();
@@ -93,5 +93,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 }

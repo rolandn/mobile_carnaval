@@ -17,7 +17,7 @@
 
     <string name="retry">Mauvais mot de passe, veuillez réessayer</string>
 
-    <string name="gloup">Gloup</string>
+    <string name="gloup">Gloup - 3 erreurs - app bloquée !</string>
 
     <string name="Init">Login initialized</string>
 
